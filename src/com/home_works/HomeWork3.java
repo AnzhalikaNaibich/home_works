@@ -184,10 +184,10 @@ public class HomeWork3 {
         int[] array = {-9, 5, -1, -3, 5, 0, 1, 4, 5, 8, 9};
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > 0) {
+            if (array[i] > 0 && array[i] % 2 == 0) {
                 sum += array[i];
             }
         }
-        System.out.println("сумма четных положительных элеиентов равна " + sum);
+        System.out.println("сумма четных положительных элементов равна: " + sum);
     }
 }
