@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Box extends Shape {
     private ArrayList<Shape> shapes = new ArrayList<>();
     private double mesto;
-
     public Box(double mesto) {
         super(mesto);
         this.mesto = mesto;

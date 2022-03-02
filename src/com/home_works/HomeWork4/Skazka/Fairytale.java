@@ -1,7 +1,7 @@
-package com.home_works;
+package com.home_works.HomeWork4.Skazka;
 
-import com.home_works.classes.Animal;
-import com.home_works.classes.Human;
+import com.home_works.HomeWork4.Skazka.classes.Animal;
+import com.home_works.HomeWork4.Skazka.classes.Human;
 
 public class Fairytale {
     public static void main(String args[]){

@@ -1,4 +1,4 @@
-package com.home_works.HomeWork_4;
+package com.home_works.HomeWork4;
 
 public class HomeWork_4 {
     public int One(int a, int b){

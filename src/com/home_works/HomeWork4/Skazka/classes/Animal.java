@@ -1,4 +1,4 @@
-package com.home_works.classes;
+package com.home_works.HomeWork4.Skazka.classes;
 
 public  class Animal {
 
