@@ -1,13 +1,12 @@
 package com.home_works.HomeWork6;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Zavuch {
     private String firstName;
     private String lastName;
-    List<Student> student = new ArrayList<>();
-    List<Student> naOtchislenie = new ArrayList<>();
+    private List<Student> student = new ArrayList<>();
+    private HashSet<Student> naOtchislenie = new HashSet<>();
 
     public Zavuch(String firstName, String lastName, List<Student> student) {
         this.firstName = firstName;
@@ -39,11 +38,11 @@ public class Zavuch {
         this.student = student;
     }
 
-    public List<Student> getNaOtchislenie() {
+    public HashSet<Student> getNaOtchislenie() {
         return naOtchislenie;
     }
 
-    public void setNaOtchislenie(List<Student> naOtchislenie) {
+    public void setNaOtchislenie(HashSet<Student> naOtchislenie) {
         this.naOtchislenie = naOtchislenie;
     }
 
@@ -63,7 +62,7 @@ public class Zavuch {
         }
     }
 
-    public void nameSubjects(String name) {
+    public void printStudentsByNameSubject(String name) {
         for (int i = 0; i < student.size(); i++) {
             if (student.get(i).getSubject().contains(name))
                 System.out.print(student.get(i).getFirstName() + " " + student.get(i).getLastName() + "; ");
@@ -71,7 +70,7 @@ public class Zavuch {
         System.out.println();
     }
 
-    public void nameZachet(String name) {
+    public void printStudentsByNameZachet(String name) {
         for (int i = 0; i < student.size(); i++) {
             if (student.get(i).getZachet().contains(name))
                 System.out.print(student.get(i).getFirstName() + " " + student.get(i).getLastName() + "; ");
@@ -79,7 +78,7 @@ public class Zavuch {
         System.out.println();
     }
 
-    public void nameExam(String name) {
+    public void printStudentsByNameExam(String name) {
         for (int i = 0; i < student.size(); i++) {
             if (student.get(i).getExams().contains(name))
                 System.out.print(student.get(i).getFirstName() + " " + student.get(i).getLastName() + "; ");
@@ -87,16 +86,15 @@ public class Zavuch {
         System.out.println();
     }
 
-    public void avgMark() {
+    public void printStudentsByAvgMark() {
         for (int i = 0; i < student.size(); i++) {
             double sum = 0;
-            int count = 0;
             double avg = 0;
             for (int n = 0; n < student.get(i).getMark().size(); n++) {
                 sum += student.get(i).getMark().get(n);
-                count += 1;
+
             }
-            avg = sum / count;
+            avg = sum / student.get(i).getMark().size();
             System.out.println(student.get(i).getFirstName() + " " + student.get(i).getLastName() +
                     " " + "средний балл: " + avg + "; ");
 
@@ -108,7 +106,7 @@ public class Zavuch {
         System.out.print("на отчисление: ");
 
         for (int i = 0; i < naOtchislenie.size(); i++) {
-            System.out.print(naOtchislenie.get(i).getFirstName() + " " + naOtchislenie.get(i).getLastName() + "; ");
+            System.out.print(student.get(i).getFirstName() + student.get(i).getLastName() +  "; ");
         }
         System.out.println();
     }

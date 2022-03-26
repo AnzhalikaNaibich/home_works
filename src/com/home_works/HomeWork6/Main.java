@@ -37,17 +37,16 @@ public class Main {
         System.out.println();
 
         System.out.print("Изучает математику: ");
-        zavuch.nameSubjects("Math");
+        zavuch.printStudentsByNameSubject("Math");
 
         System.out.print("Зачёт по истории: ");
-        zavuch.nameZachet("History");
+        zavuch.printStudentsByNameZachet("History");
 
         System.out.print("Экзамен по литературе: ");
-        zavuch.nameExam("Literature");
+        zavuch.printStudentsByNameExam("Literature");
 
         System.out.println();
 
-        zavuch.avgMark();
-
+        zavuch.printStudentsByAvgMark();
     }
 }

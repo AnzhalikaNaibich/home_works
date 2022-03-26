@@ -9,10 +9,10 @@ public class Student {
     private String lastName;
     private int age;
     private int kurs;
-    private List<Integer> mark = new ArrayList<>();
-    private List<String> subject = new ArrayList<>();
-    private List<String> zachet = new ArrayList<>();
-    private List<String> exams = new ArrayList<>();
+    private List<Integer> mark;
+    private List<String> subject;
+    private List<String> zachet;
+    private List<String> exams;
     private boolean homework;
 
     public Student(String firstName, String lastName, int age, int kurs, List<Integer> mark, List<String> subject,
