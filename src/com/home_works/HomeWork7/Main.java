@@ -1,13 +1,14 @@
 package com.home_works.HomeWork7;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Customer c1 = new Customer(1, "Ivanov", "Ivan", "Ivanovich", "Ivanovskaya street, 1", 123456789, 987654321);
+        Customer c1 = new Customer(1, "Ivanov", "Ivan", "Semenovich", "Ivanovskaya street, 1", 123456789, 987654321);
         Customer c2 = new Customer(2, "Petrov", "Petr", "Petrovich", "Petrovskaya street, 2", 108899667, 766998801);
         Customer c3 = new Customer(3, "Semenov", "Semen", "Semenovich", "Semenovskaya street, 3", 187654345, 543456781);
-        Customer c4 = new Customer(4, "Ivanov", "Petr", "Semenovich", "Lenina street, 4", 287654345, 543456782);
+        Customer c4 = new Customer(4, "Ivanov", "Ivan", "Ivanovich", "Lenina street, 4", 287654345, 543456782);
         Customer c5 = new Customer(5, "Petrov", "Ivan", "Ivanovich", "Akademicheskaya street, 5", 387654343, 343456783);
         Customer c6 = new Customer(6, "Semenov", "Oleg", "Alekseevich", "Slavinskogo street, 6", 400654343, 343456004);
         Customer c7 = new Customer(7, "Eremin", "Pavel", "Aleksandrovich", "Pushkina street, 7", 511654343, 343456115);
@@ -26,8 +27,8 @@ public class Main {
         customer.add(c9);
 
         Agregator agregator = new Agregator();
-        Collections.sort(customer);
         agregator.setCustomer(customer);
+
         agregator.printAllCustomer();
 
         System.out.println("Список покупателей по номеру кредитной карты: ");

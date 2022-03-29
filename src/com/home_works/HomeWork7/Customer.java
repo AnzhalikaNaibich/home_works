@@ -1,6 +1,6 @@
 package com.home_works.HomeWork7;
 
-public class Customer implements Comparable<Customer>{
+public class Customer implements Comparable<Customer> {
     private int id;
     private String lastName;
     private String firstName;
@@ -90,6 +90,15 @@ public class Customer implements Comparable<Customer>{
 
     @Override
     public int compareTo(Customer o) {
-            return this.lastName.compareTo(o.lastName);
+        int x = this.lastName.compareTo(o.lastName);
+        if (x != 0) {
+            return x;
+        }
+        x = this.firstName.compareTo(o.firstName);
+        if (x != 0) {
+            return x;
+        }
+        x = this.fatherName.compareTo(o.fatherName);
+        return x;
     }
 }
